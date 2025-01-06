@@ -1,0 +1,701 @@
+body {
+    /* font-family: 'Arial', sans-serif; */
+    font-family: "KaiTi", serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+    /* 与导航栏的高度相等 */
+    background-color: #f5f5f5;
+}
+
+
+.nav {
+    position: fixed;
+    /* 添加这行代码 */
+    top: 0;
+    /* 添加这行代码 */
+    left: 0;
+    /* 添加这行代码 */
+    width: 100%;
+    /* 添加这行代码，确保导航栏宽度覆盖整个屏幕 */
+    z-index: 1000;
+    /* 确保导航栏在其他内容之上 */
+
+
+    margin: 0;
+    display: flex;
+    /* 使用flex布局 */
+    align-items: center;
+    /* 垂直居中对齐 */
+    justify-content: space-between;
+    /* 两端对齐，项目之间的间隔都相等 */
+    /* background-color: #fff; */
+    /* padding: 10px; */
+    background-image: linear-gradient(to bottom, #beecd3b4, #f0c987c0);
+    height: 60px;
+    overflow: hidden;
+    /* cursor: pointer; 鼠标悬停时显示为点击样式 */
+}
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    /* float: left; */
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+    width: 200px;
+    height: 100%;
+    transition: background-color 0.1s ease;
+    /* 平滑过渡效果 */
+    padding: 5px 10px;
+    /* 为链接添加一些内边距 */
+}
+
+.nav a:hover {
+    /* 悬停时的样式 */
+    background-color: #7aa87e87;
+    /* 背景颜色变深 */
+    color: #fff;
+    /* 文字颜色变亮 */
+}
+
+.nav img {
+    height: 8vh;
+    /* 根据需要调整 logo 的高度 */
+    margin-left: 3vw;
+    /* z-index: 0; */
+}
+
+
+.search-form {
+    position: relative;
+    width: 240px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    margin-right: 3vw;
+}
+
+.si {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid#b7ea8e;
+    background-color: transparent;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.si:focus {
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+.sb {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    fill: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.sb:hover .search-icon {
+    transform: scale(1.1);
+}
+
+.sb:active .search-icon {
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+.nav .background-image {
+    height: 40px;
+    position: absolute;
+    /* 设置绝对定位 */
+    left: 350px;
+    /* 靠左对齐 */
+    top: 10px;
+    /* 靠顶部对齐 */
+    z-index: 0;
+    /* 确保图片在其他内容之下 */
+}
+
+.nav .background-image2 {
+    height: 40px;
+    position: absolute;
+    /* 设置绝对定位 */
+    left: 1080px;
+    top: 20px;
+    z-index: 0;
+    /* 确保图片在其他内容之下 */
+    transform: rotate(180deg);
+}
+
+.nav .background-image3 {
+    height: 20px;
+    position: absolute;
+    /* 设置绝对定位 */
+    left: 900px;
+    /* 靠左对齐 */
+    top: 30px;
+    /* 靠顶部对齐 */
+    z-index: 0;
+    /* 确保图片在其他内容之下 */
+    transform: rotate(130deg);
+}
+
+
+
+header {
+    /* background-image: url(images/R.jpg);
+    background-size: cover; */
+    background-color: #df1c1c;
+    margin: 0;
+    padding: 0;
+    /* width: 100vw; */
+    background-position: center -60px;
+    height: calc(100vh - 60px);
+    /* 使用100vh使高度占满整个视口高度 */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; 如果需要垂直居中文本，添加这行代码 */
+    /* color: #003d02; */
+    /* text-align: center; */
+    overflow: hidden;
+    /* 超出部分隐藏 */
+    position: relative;
+    /* 添加这一行 */
+}
+
+.sliderbox {
+    width: 100vw;
+    height: calc(100vh - 60px);
+}
+
+li {
+    list-style: none;
+}
+
+.sxul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 0;
+    padding: 0;
+}
+
+.item {
+    /* width: 100vw;
+    height: calc(100vh - 60px); */
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.item.active {
+    opacity: 0;
+}
+
+
+.gm1,
+.gm2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    /* 背景图片覆盖整个元素 */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 图片居中 */
+}
+
+.gm1 {
+    background-image: url(images/微信图片_20241024225751.jpg);
+    width: 100vw;
+    height: calc(100vh - 60px);
+}
+
+.gm2 {
+    background-image: url(images/4b089b5d96c655030e57d14c85344ea.jpg);
+    width: 100vw;
+    height: calc(100vh - 60px);
+    background-position: center;
+    /* 图片居中 */
+}
+
+.sx1 {
+    width: 60vw;
+    height: 30vh;
+    /* background-color: #000000; */
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    top: 100px;
+    left: 300px;
+    transform: translateX(-5%);
+    padding: 8px;
+}
+
+.sx2 {
+    width: 60vw;
+    height: 30vh;
+    /* background-color: #000000; */
+    color: white;
+    position: absolute;
+    font-size: 30px;
+    top: 100px;
+    left: 300px;
+    transform: translateX(-5%);
+    padding: 8px;
+}
+
+#btn-left {
+    width: 30px;
+    height: 69px;
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    line-height: 69px;
+    padding-left: 5px;
+    z-index: 10;
+    /*始终显示在图片的上层*/
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-60%);
+    /*使按钮向上偏移居中对齐*/
+    cursor: pointer;
+    opacity: 0;
+    /*平时隐藏*/
+}
+
+header:hover #btn-left {
+    opacity: 1;
+}
+
+#btn-right {
+    width: 26px;
+    height: 69px;
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    line-height: 69px;
+    padding-left: 5px;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-60%);
+}
+
+header:hover #btn-right {
+    opacity: 1;
+}
+
+#circle {
+    height: 20px;
+    display: flex;
+    position: absolute;
+    bottom: 35px;
+    left: 46%;
+    margin-left: -10px;
+    /* z-index: 999; */
+    /* 将圆的半径的一半作为负值进行居中 */
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(111, 106, 106);
+    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    margin: 5px;
+}
+
+.white {
+    background-color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+.main {
+    margin-top: 20px;
+    padding: 0;
+    background: linear-gradient(to bottom right, #fdf1e2, #f0ca87);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zi {
+    margin-bottom: 20px;
+    /* 根据需要调整zi与长方形阵列之间的间距 */
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+
+.rectangle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* 均匀分布长方形 */
+    width: calc(340px * 3.5);
+    /* 根据长方形的宽度计算容器宽度 */
+    margin-bottom: 40px;
+}
+
+.rectangle {
+    width: 340px;
+    /* 长方形的宽度 */
+    height: 518px;
+    /* 长方形的高度 */
+    margin-bottom: 40px;
+    /* 长方形之间的垂直间距 */
+    background-color: #efeee4;
+    /* 长方形的背景颜色，根据需要调整 */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 确保图片和文字部分均匀分布 */
+    overflow: hidden;
+    z-index: 0;
+}
+
+.shad1 {
+    width: 340px;
+    /* 长方形的宽度 */
+    height: 518px;
+    /* 长方形的高度 */
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: background-color 0.3s;
+    z-index: 999;
+}
+
+.text1 {
+    /* color: white; */
+    width: 170px;
+    position: absolute;
+    left: 50px;
+    /* top: 50px; */
+    z-index: 1000;
+}
+
+.info1,
+.info2,
+.info3 {
+    color: black;
+    text-decoration: none;
+    width: 170px;
+    font-size: 20px;
+    background-color: rgba(250, 250, 250, 0.9);
+    padding: 0 10px;
+    position: absolute;
+    left: -300px;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+.info3 {
+    top: 130px;
+    transition: left 0.4s linear;
+}
+
+.info2 {
+    top: 90px;
+    transition: left 0.4s linear 0.1s;
+}
+
+.info1 {
+    top: 50px;
+    transition: left 0.4s linear 0.2s;
+}
+
+.rectangle:hover .shad1 {
+    background-color: rgba(60, 60, 60, 0.3);
+}
+
+.rectangle:hover .info1,
+.rectangle:hover .info2,
+.rectangle:hover .info3 {
+    left: 0px;
+}
+
+.rectangle:hover .image-container {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.rectangle:hover .text-container {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.image-container {
+    width: 100%;
+    height: 50%;
+    /* 图片部分占一半高度 */
+    background-size: cover;
+    background-position: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 确保图片覆盖整个容器 */
+}
+
+.text-container {
+    height: 50%;
+    /* 文字部分占一半高度 */
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.classic {
+    display: flex;
+    /* background-color: #2A3357; */
+    align-items: center;
+    /* 确保子项在垂直方向上居中 */
+    justify-content: center;
+    /* 确保子项在水平方向上居中 */
+    background-image: linear-gradient(to top left, #fff1e1, #f2c887);
+    padding: 3.5rem;
+    height: 80vh;
+    margin-top: 20px;
+}
+
+.re0 {
+    display: flex;
+    align-items: center;
+    /* 确保子项在垂直方向上居中 */
+    justify-content: center;
+    /* 确保子项在水平方向上居中 */
+    width: 40%;
+    /* re0 占左侧的大部分宽度 */
+    margin-right: 20px;
+    /* 两个部分之间的间距 */
+    background-color: #e5eec1;
+    height: 90%;
+    background-image: url(images/4b089b5d96c655030e57d14c85344ea.jpg);
+    background-position: center;
+    position: relative;
+}
+
+.re0::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(229, 238, 193, 0.5);
+    /* 调整这里的透明度 */
+    z-index: 1;
+    pointer-events: none;
+    /* 防止伪元素影响点击事件 */
+}
+
+.re0>* {
+    position: relative;
+    z-index: 2;
+    /* 确保内容在伪元素之上 */
+}
+
+.zi2 {
+    position: absolute;
+    /* 使用绝对定位 */
+    top: 50%;
+    /* 定位到容器的垂直中心 */
+    left: 50%;
+    /* 定位到容器的水平中心 */
+    transform: translate(-50%, -50%);
+    /* 使元素居中 */
+    font-size: 20px;
+    writing-mode: vertical-rl;
+    /* 设置竖排书写模式（从右到左） */
+    text-align: center;
+    /* 文本居中 */
+    line-height: 1.5;
+    /* 行高可以根据需要调整 */
+    margin: 0;
+    padding: 10px;
+    color: #003d02;
+    letter-spacing: 0.5px;
+
+}
+
+.rectangles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2列布局 */
+    grid-gap: 20px;
+    /* 长方形之间的间距 */
+    width: 60%;
+    /* rectangles 占右侧的宽度 */
+    height: 90%;
+}
+
+.rectangle1,
+.rectangle2,
+.rectangle3,
+.rectangle4 {
+    padding: 20px;
+    /* 内边距 */
+    border: 1px solid #ccc;
+    /* 边框 */
+    display: flex;
+    align-items: center;
+    /* 确保子项在垂直方向上居中 */
+    justify-content: center;
+    /* 确保子项在水平方向上居中 */
+    transition: box-shadow 0.3s ease;
+    /* 平滑过渡效果 */
+    position: relative;
+    /* 为了伪元素定位 */
+    box-sizing: border-box;
+    /* 包含边框和内边距 */
+}
+
+.rectangle1::before,
+.rectangle2::before,
+.rectangle3::before,
+.rectangle4::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    /* 这里是内边框与外边框之间的距离，可以根据需求调整 */
+    left: 10px;
+    /* 同上 */
+    right: 10px;
+    /* 同上 */
+    bottom: 10px;
+    /* 同上 */
+    border: 2px solid #000000;
+    /* 内边框颜色和样式 */
+    pointer-events: none;
+    /* 防止伪元素阻挡内容交互 */
+
+}
+
+.rectangle1 {
+    background-color: #e5eec1;
+}
+
+.rectangle2 {
+    background-color: #ddd8ae;
+}
+
+.rectangle3 {
+    background-color: #ddd8ae;
+}
+
+.rectangle4 {
+    background-color: #e5eec1;
+}
+
+.rectangle1:hover,
+.rectangle2:hover,
+.rectangle3:hover,
+.rectangle4:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* 底部阴影效果 */
+}
+
+
+.poem {
+    text-align: center;
+    font-size: 17px;
+}
+
+
+
+.footer {
+    background-color: #e5ca9c;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex-basis: 20%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #d29e69;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #000000;
+}

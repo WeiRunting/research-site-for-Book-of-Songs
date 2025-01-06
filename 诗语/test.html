@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: flex-start;
+            height: 500px;
+            border: 1px solid #000;
+        }
+
+        .flex-item {
+            width: 100px;
+            height: 50px;
+            margin: 5px;
+            background-color: lightblue;
+            border: 1px solid #666;
+        }
+
+        .flex-item:nth-child(1) {
+            height: 50px;
+        }
+
+        .flex-item:nth-child(2) {
+            height: 60px;
+        }
+
+        .flex-item:nth-child(3) {
+            height: 70px;
+        }
+
+        .flex-item:nth-child(4) {
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <table>
+        <caption>表格标题</caption>
+        <tr>
+            <th>表头1</th>
+            <th>表头2</th>
+        </tr>
+        <tr>
+            <td>数据1</td>
+            <td>数据2</td>
+        </tr>
+    </table> -->
+    <!-- <div id="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+    </div> -->
+    <div>
+        <div id="myDiv"><strong>Original content</strong></div>
+    </div>
+    <button onclick="innerhtml()">show innerHTML</button>
+    <button onclick="innertext()">show innertext</button>
+    <button onclick="outerhtml()">show outerHTML</button>
+    <button onclick="outertext()">show outertext</button>
+
+    <script>
+        function innerhtml() {
+            var div = document.getElementById('myDiv');
+            // div.innerHTML = '<strong>New content with <em>HTML</em> tags!</strong>';
+            window.alert(div.innerHTML);//<strong>Original content</strong>
+        }
+        function innertext() {
+            var div = document.getElementById('myDiv');
+            // div.innerHTML = '<strong>New content with <em>HTML</em> tags!</strong>';
+            window.alert(div.innerText);//Original content
+            div.innerText = 'New text content';
+        }
+        function outerhtml() {
+            var div = document.getElementById('myDiv');
+            // div.innerHTML = '<strong>New content with <em>HTML</em> tags!</strong>';
+            window.alert(div.outerHTML);//<div id="myDiv">Original content</div>
+        }
+        function outertext() {
+            var div = document.getElementById('myDiv');
+            // div.innerHTML = '<strong>New content with <em>HTML</em> tags!</strong>';
+            window.alert(div.outerText);//Original content
+            div.outerText = 'New text content';//这里可以发现当点击完这个按钮时，
+            // 再点击其他按钮就失效了，因为这句outertext删掉了原来的div，新建了一个不知名div
+        }
+    </script>
+
+</body>
+
+</html>

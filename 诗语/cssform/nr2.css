@@ -1,0 +1,405 @@
+body {
+    /* font-family: 'Arial', sans-serif; */
+    font-family: "KaiTi", serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* 与导航栏的高度相等 */
+    /* background-image: linear-gradient(to bottom right, #fff1e1, #f2c887 30%, #d2efe6 55%, #cae7b0 80%); */
+}
+
+.nav {
+    position: fixed; /* 添加这行代码 */
+    top: 0; /* 添加这行代码 */
+    left: 0; /* 添加这行代码 */
+    width: 100%; /* 添加这行代码，确保导航栏宽度覆盖整个屏幕 */
+    z-index: 1000; /* 确保导航栏在其他内容之上 */
+
+
+    display: flex;
+    /* 使用flex布局 */
+    align-items: center;
+    /* 垂直居中对齐 */
+    justify-content: space-between;
+    /* 两端对齐，项目之间的间隔都相等 */
+    background-image: linear-gradient(to bottom, #beecd3b4, #f0c987c0);
+    height: 60px;
+    overflow: hidden;
+    /* cursor: pointer; 鼠标悬停时显示为点击样式 */
+}
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    /* float: left; */
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+    width: 200px;
+    height: 100%;
+    transition: background-color 0.1s ease;
+    /* 平滑过渡效果 */
+    padding: 5px 10px;
+    /* 为链接添加一些内边距 */
+}
+
+.nav a:hover {
+    /* 悬停时的样式 */
+    background-color: #7aa87e87;
+    /* 背景颜色变深 */
+    color: #fff;
+    /* 文字颜色变亮 */
+}
+
+.nav img {
+    height: 8vh;
+    /* 根据需要调整 logo 的高度 */
+    margin-left: 3vw;
+    /* z-index: 0; */
+}
+
+.search-form {
+    position: relative;
+    width: 240px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    margin-right: 3vw;
+}
+
+.si {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid#b7ea8e;
+    background-color: transparent;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.si:focus {
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+.sb {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    fill: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.sb:hover .search-icon {
+    transform: scale(1.1);
+}
+
+.sb:active .search-icon {
+    transform: scale(0.9);
+}
+
+.nav .background-image {
+    height: 40px;
+    position: absolute;
+    /* 设置绝对定位 */
+    left: 350px;
+    /* 靠左对齐 */
+    top: 10px;
+    /* 靠顶部对齐 */
+    z-index: 0;
+    /* 确保图片在其他内容之下 */
+}
+
+.nav .background-image2 {
+    height: 40px;
+    position: absolute;
+    /* 设置绝对定位 */
+    left: 1080px;
+    top: 20px;
+    z-index: 0;
+    /* 确保图片在其他内容之下 */
+    transform: rotate(180deg);
+}
+
+.nav .background-image3 {
+    height: 20px;
+    position: absolute;
+    /* 设置绝对定位 */
+    left: 900px;
+    /* 靠左对齐 */
+    top: 30px;
+    /* 靠顶部对齐 */
+    z-index: 0;
+    /* 确保图片在其他内容之下 */
+    transform: rotate(130deg);
+}
+
+.main {
+    background-image: url(images/e9a21e99d027038a132204a7d3c661e.jpg);
+    background-size: cover;
+    /* 使背景图片覆盖整个区域 */
+    background-position: center;
+    /* 背景图片居中 */
+    background-repeat: no-repeat;
+    /* 不重复显示背景图片 */
+    /* height: 300px;
+    width: 100%; */
+}
+
+.dt {
+    background-color: #fff2e7;
+    width: 65%;
+    margin: 0 auto;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 使得所有子div水平居中 */
+    /* height: 400px; */
+}
+
+
+.head {
+    width: 100%;
+    /* 占满父元素宽度 */
+    margin-top: 50px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    /* background-color: aliceblue; */
+}
+
+.head p {
+    margin-left: 45px;
+}
+
+
+.bp {
+    /* height: 50px; */
+    background-color: aqua;
+    /* width: 100%; */
+    background-image: url('images/528fffe3140fbed954a4fafdfda8bf8.jpg');
+    /* 替换为你的图片路径 */
+    background-size: cover;
+    /* 使背景图覆盖整个元素 */
+    background-position: center;
+    /* 将背景图居中显示 */
+    background-repeat: no-repeat;
+    /* 防止背景图重复 */
+    height: 120px;
+    /* 根据需要设置高度 */
+}
+
+.fl {
+    background-color: #4CAF50;
+    display: flex;
+    /* 使用flex布局 */
+    width: 100%;
+    /* 设置宽度为父元素的宽度 */
+    height: 50px;
+    /* 设置高度 */
+}
+
+.rectangle {
+    flex: 1;
+    /* 每个小长方形占用相等的宽度 */
+    margin: 0;
+    /* 无间隙 */
+    background-color: #ddd8ae;
+    /* 背景色 */
+    cursor: pointer;
+    /* 鼠标指针效果 */
+    transition: background-color 0.3s;
+    /* 平滑过渡 */
+    border: 1px solid black;
+    display: flex;
+    /* 使用flex布局 */
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+    text-align: center;
+    /* 确保文本水平居中 */
+}
+
+.rectangle:hover {
+    background-color: #dee5ed;
+    /* 鼠标悬停时的效果 */
+}
+
+.rectangle.selected {
+    background-color:  #dee5ed;
+    /* 选中时的背景颜色 */
+    color: black;
+    /* 选中时的文字颜色 */
+}
+
+.zk {
+    margin-top: 20px;
+    padding: 5%;
+    width: 90%;
+    height: 1180px;
+    /* background-color: lightyellow; */
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.zk .y1 {
+    text-align: center;
+}
+
+.more {
+    width: 100%;
+    /* height: 300px; */
+    /* background-color: #4CAF50; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.r0{
+    height: 40px;
+    width: 90%;
+    border: none;
+    margin-top: 0;
+    /* padding: 2%; */
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    /* 使用flex布局 */
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+}
+
+.r{
+    height: 200px;
+    width: 90%;
+    border: 1px solid black;
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    position: relative; /* 确保相对定位 */
+    overflow: hidden; /* 确保伪元素不会超出边界 */
+    display: flex;
+    /* 使用flex布局 */
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: flex-end; /* 水平末端对齐 */
+}
+
+.r::before{
+    content: "";
+    position: absolute; /* 绝对定位 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.3; /* 调整透明度 */
+    z-index: 1; /* 确保在背景图之上 */
+}
+
+.zi {
+    height: 90%;
+    width: 70%;
+    border: none;
+    /* background-color: red; */
+    margin-right: 10px; /* 设置右边距 */
+    display: flex; /* 使用flex布局 */
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+   
+}
+
+.zi a {
+    writing-mode: vertical-rl; /* 设置竖排书写模式（从右到左） */
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    z-index: 999;
+}
+
+
+
+
+/* .footer {
+    background-color: #cbe6e8;
+    padding: 20px;
+    text-align: center;
+} */
+.footer {
+    background-color: #e5ca9c;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex-basis: 20%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #d29e69;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #000000;
+}

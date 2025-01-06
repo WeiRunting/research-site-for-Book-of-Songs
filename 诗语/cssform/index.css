@@ -1,0 +1,928 @@
+body {
+    /* font-family: 'Arial', sans-serif; */
+    font-family: "KaiTi", serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* 与导航栏的高度相等 */
+    background-color: #f5f5f5;
+}
+
+.nav {
+    position: fixed; /* 添加这行代码 */
+    top: 0; /* 添加这行代码 */
+    left: 0; /* 添加这行代码 */
+    width: 100%; /* 添加这行代码，确保导航栏宽度覆盖整个屏幕 */
+    z-index: 1000; /* 确保导航栏在其他内容之上 */
+
+    display: flex;
+    /* 使用flex布局 */
+    align-items: center;
+    /* 垂直居中对齐 */
+    justify-content: space-between;
+    /* 两端对齐，项目之间的间隔都相等 */
+    /* background-color: #fff; */
+    /* padding: 10px; */
+    background-image: linear-gradient(to bottom, #beecd3b4 , #f0c987c0 );
+    height: 60px;
+    overflow: hidden;
+    /* cursor: pointer; 鼠标悬停时显示为点击样式 */
+}
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    /* float: left; */
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+    width: 200px;
+    height: 100%;
+    transition: background-color 0.1s ease;
+    /* 平滑过渡效果 */
+    padding: 5px 10px;
+    /* 为链接添加一些内边距 */
+}
+
+.nav a:hover {
+    /* 悬停时的样式 */
+    background-color: #7aa87e87;
+    /* 背景颜色变深 */
+    color: #fff;
+    /* 文字颜色变亮 */
+}
+
+.nav img {
+    height: 8vh;
+    /* 根据需要调整 logo 的高度 */
+    margin-left: 3vw;
+    /* z-index: 0; */
+}
+
+
+.search-form {
+    position: relative;
+    width: 240px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    margin-right: 3vw;
+}
+
+.si {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid#b7ea8e;
+    background-color: transparent;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.si:focus {
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+.sb {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    fill: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.sb:hover .search-icon {
+    transform: scale(1.1);
+}
+
+.sb:active .search-icon {
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+.nav .background-image {
+    height: 40px;
+    position: absolute;
+    /* 设置绝对定位 */
+    left: 350px;
+    /* 靠左对齐 */
+    top: 10px;
+    /* 靠顶部对齐 */
+    z-index: 0;
+    /* 确保图片在其他内容之下 */
+}
+
+.nav .background-image2 {
+    height: 40px;
+    position: absolute;
+    /* 设置绝对定位 */
+    left: 1080px;
+    top: 20px;
+    z-index: 0;
+    /* 确保图片在其他内容之下 */
+    transform: rotate(180deg);
+}
+
+.nav .background-image3 {
+    height: 20px;
+    position: absolute;
+    /* 设置绝对定位 */
+    left: 900px;
+    /* 靠左对齐 */
+    top: 30px;
+    /* 靠顶部对齐 */
+    z-index: 0;
+    /* 确保图片在其他内容之下 */
+    transform: rotate(130deg);
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background-color: #e5ca9c;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex-basis: 20%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #d29e69;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #000000;
+}
+
+.image-placeholder {
+    font-size: 50px;
+    margin: 0;
+    /* padding: 0; */
+    width: 100%;
+    height: 276px;
+    /* 使用100vh使高度占满整个视口高度 */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; 如果需要垂直居中文本，添加这行代码 */
+    color: #2a3357;
+    /* text-align: center; */
+    overflow: hidden;
+    /* 超出部分隐藏 */
+    position: relative;
+    /* 添加这一行 */
+}
+
+.image-placeholder::before {
+    content: "";
+    /* 创建伪元素 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 276px;
+    background-image: url(images/微信图片_20241023222840.jpg);
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.3;
+    /* 设置透明度 */
+    z-index: -1;
+    /* 使伪元素位于子元素的下方 */
+}
+
+.image-placeholder p {
+    font-weight: bold;
+    position: absolute;
+    right: 8%;
+    display: flex; /* 使用flex布局 */
+    top: 10%;
+    /* align-items: center; */
+    opacity: 1;
+}
+
+.image-placeholder div{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    font-size: 1.5vw;
+    left: 0;
+    background-color: #fbfcf77c; 
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    padding: 0 5%; /* 添加左右padding，可以根据需要调整百分比 */
+}
+
+.image-placeholder2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-placeholder2 .zhul{
+    position: absolute;
+    left: 0;
+    width: 30%;
+    height: 100%;
+	overflow: hidden;
+}
+
+.shad1 {
+    width: 100%;
+    /* 长方形的宽度 */
+    height: 100%;
+    /* 长方形的高度 */
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: background-color 0.3s;
+    z-index: 999;
+}
+.zhul:hover .shad1 {
+    background-color: rgba(60, 60, 60, 0.7);
+}
+
+.image-placeholder2 .zhum{
+    color: #003d02;
+    position: relative;
+    width: 27%;
+    height: 100%;
+    background-color: #adb294c5;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 0%;
+}
+
+
+.moredetail, .moredetail2{
+    display: none; 
+    width: 90%;
+    height: 320px;
+    background-color: #bdc1aa;
+    position: absolute;
+    bottom: 37%;
+    left: 5%;
+}
+
+.dl-sort dt {
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dl-sort dd a {
+    width: 75%;
+    height: 30px;
+    text-align: center;
+    line-height: 24px;
+    color: #3e3e3e;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #cccccc;
+    font-size: 20px;
+}
+
+.dl-sort dd {
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* 垂直排列按钮 */
+    width: 90%;
+    position: absolute; /* 绝对定位 */
+    bottom: 5%; /* 距离底部5% */
+    left: 5%; 
+    /* background-color: #ba499e; */
+}
+
+.btn {
+    font-family: "KaiTi", serif;
+    padding: 10px; /* 根据需要调整按钮内边距 */
+    font-size: 1.5em; /* 根据需要调整字体大小 */
+    cursor: pointer;
+    background-color: transparent; /* 背景颜色透明 */
+    border: none; /* 移除边框 */
+    border-bottom: 1px solid #2a3357; /* 只显示底部边框 */
+    outline: none; /* 无轮廓线 */
+    letter-spacing: 4px; /* 增加文字间距，使按钮文字比正文要疏 */
+    margin-bottom: 10px; /* 为每个按钮添加底部边距，除了最后一个按钮 */
+    text-align: center; /* 文字居中 */
+
+    position: relative;
+    overflow: hidden;
+    transition: border-bottom-width 0.3s ease;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #2a3357;
+    width: 0; /* 初始宽度为0 */
+    transition: width 0.3s ease;
+}
+
+.btn:hover::before {
+    width: 100%; /* 鼠标悬停时宽度变为100% */
+}
+
+.btn:hover {
+    border-bottom-color: #2a3357; /* 鼠标悬停时底部边框颜色变为 #2a3357 */
+}
+
+
+
+.zs1 {
+    width: 90px;
+    height: 234px;
+    color: #003d02;
+    margin-left: 10px;
+    position: absolute;
+    bottom: 105px;
+    left: 20%;
+}
+
+.vertical-text {
+    position: absolute;
+    bottom: 140px;
+    left: 37%;
+
+    font-size: 30px;
+    writing-mode: vertical-rl;
+    /* 设置竖排书写模式（从右到左） */
+    text-align: center;
+    /* 文本居中 */
+    line-height: 1.5;
+    /* 行高可以根据需要调整 */
+    margin: 0;
+    margin-left: 10px;
+    padding: 10px;
+    /* padding: 5px; */
+    color: #003d02;
+    letter-spacing: 0.5px;
+    /* 设置字体颜色 */
+    font-weight: bold;
+}
+
+.detail1 {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-size: 40px;
+	opacity: 0;
+	z-index: 1000;
+}
+
+.zhul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/微信图片_20241023215249.jpg);
+    background-size: cover;
+    background-position: right;
+    opacity: 0.3;
+    z-index: -1;
+    
+}
+
+.zhul:hover .detail1 {
+    opacity: 1;
+}
+
+
+.image-placeholder3 {
+    margin-bottom: 15px;
+    padding: 0;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-placeholder3 .huas{
+    /* background-color: #180112; */
+    position: absolute;
+    top: 0;
+    left: 31.5%;
+    width: 68.5%;
+    height: 49.25%;
+    
+}
+
+.huas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/微信图片_20241023120353.jpg);
+    background-size: cover;
+    background-position: 20% 70%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+
+.image-placeholder3 .huax {
+    background-color: #efdecf;
+    color: #ba499e;
+    font-size: 1.5vw;
+    position: absolute;
+    top: 50.75%;
+    left: 31.5%;
+    width: 68.5%;
+    height: 49.25%;
+    bottom: 0%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; /* 根据需要添加内边距 */
+}
+
+.moredetail3, .moredetail4{
+    display: none; 
+    width: 67%;
+    height:250px;
+    background-color: #efdecf;
+    position: absolute;
+    bottom: 16%;
+    left: 3%;
+}
+
+.dl-sort dt {
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dl-sort dd a {
+    width: 75%;
+    height: 30px;
+    text-align: center;
+    line-height: 24px;
+    color: #3e3e3e;
+    text-decoration: none;
+    padding: 2px 10px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #cccccc;
+    font-size: 20px;
+}
+
+.dl-sort dd {
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+.image-placeholder3 .huax ul{
+    height: 60%;
+    position: absolute;
+    bottom: 26%;
+    width: 100%;
+}
+
+.ll {
+    display: flex; /* 设置ul为flex布局 */
+    flex-wrap: nowrap; /* 不允许换行 */
+    list-style: none; /* 移除列表项的默认样式 */
+    padding: 0; /* 移除默认的内边距 */
+    margin: 0; /* 移除默认的外边距 */
+    justify-content: space-around; /* 均匀分布 */
+    align-items: center;
+    width: 100%; /* 设置宽度为100%，确保ul占满容器宽度 */
+}
+
+.ll li {
+    flex: 2; /* 让每个li占据等宽 */
+    text-align: center; /* 文字居中 */
+    margin: 3px; /* 为每个li添加外边距 */
+    /* background-color: blue; */
+}
+
+.ll li p {
+    margin: 10px auto; /* 为段落添加上下外边距 */
+}
+
+.buttons2 {
+    display: flex; /* 设置按钮组为flex布局 */
+    flex-direction: column; /* 垂直排列按钮 */
+    align-items: center; /* 垂直居中 */
+
+    width: 30%;
+    position: absolute; /* 绝对定位 */
+}
+
+/* .btn2 {
+    margin: 5px; 
+} */
+
+.btn2 {
+    font-family: "KaiTi", serif;
+    width: 80%;
+    padding: 10px; /* 根据需要调整按钮内边距 */
+    font-size: 1em; /* 根据需要调整字体大小 */
+    cursor: pointer;
+    background-color: transparent; /* 背景颜色透明 */
+    border: none; /* 移除边框 */
+    border-bottom: 1px solid #2a3357; /* 只显示底部边框 */
+    outline: none; /* 无轮廓线 */
+    letter-spacing: 4px; /* 增加文字间距，使按钮文字比正文要疏 */
+    margin-bottom: 10px; /* 为每个按钮添加底部边距，除了最后一个按钮 */
+    text-align: center; /* 文字居中 */
+    position: relative;
+    overflow: hidden;
+    transition: border-bottom-width 0.3s ease;
+}
+
+.btn2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #2a3357;
+    width: 0; /* 初始宽度为0 */
+    transition: width 0.3s ease;
+}
+
+.btn2:hover::before {
+    width: 100%; /* 鼠标悬停时宽度变为100% */
+}
+
+.btn2:hover {
+    border-bottom-color: #2a3357; /* 鼠标悬停时底部边框颜色变为 #2a3357 */
+}
+
+
+
+
+
+
+.huaword {
+    color: #ba499e;
+    position: absolute;
+    /* 使文字脱离文档流，进行定位 */
+    top: 10%;
+    /* 垂直居中 */
+    left: 10%;
+    /* 设置文字位置到图片的右边 */
+    /* transform: translateY(-50%);  */
+    font-size: 30px;
+    line-height: 1.5;
+    margin-left: 17px;
+    /* 文字和图片之间的间距 */
+    z-index: 1;
+    /* 确保文字在伪元素之上 */
+    font-weight: bold;
+}
+
+.zs2 {
+    color: #ba499e;
+    width: 370px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    /* 垂直居中 */
+    left: 50%;
+    /* 设置文字位置到图片的右边 */
+}
+
+.detail2 {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    font-size: 40px;
+	z-index: 1000;
+	opacity: 0;
+}
+.huas:hover .detail2 {
+    opacity: 1;
+}
+
+.shad2 {
+    width: 100%;
+    /* 长方形的宽度 */
+    height: 100%;
+    /* 长方形的高度 */
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: background-color 0.3s;
+    z-index: 999;
+}
+.huas:hover .shad2 {
+    background-color: rgba(60, 60, 60, 0.7);
+}
+
+
+.zhut {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    /* height: auto; */
+    height: 90vh;
+    opacity: 1;
+}
+
+.huat {
+    position: absolute;
+    /* vertical-align: ;  */
+    transform: translateY(-20%);
+    /* bottom: -50px; */
+    left: 0;
+    width: 30%;
+    /* height: auto; */
+    height: 140vh;
+    opacity: 1;
+}
+
+
+.header {
+    background-image: url(images/R.jpg);
+    background-size: cover;
+    background-position: center -60px;
+    height: calc(100vh - 60px);
+    /* 使用100vh使高度占满整个视口高度 */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; 如果需要垂直居中文本，添加这行代码 */
+    color: #003d02;
+    /* text-align: center; */
+    overflow: hidden;
+    /* 超出部分隐藏 */
+    position: relative;
+    /* 添加这一行 */
+}
+
+
+
+.header h1 {
+    font-size: 8.5vw;
+    position: absolute;
+    left: 20%;
+    top: 11%;
+    /* margin-top: 230px;
+    margin-left: 300px; */
+}
+
+.zhang {
+    height: 9vh;
+    position: absolute;
+    /* left: -170px;
+    top: 170px; */
+    left: 38%;
+    top: 32%;
+    /* margin-top: 170px;
+    margin-left: -350px; */
+}
+
+.header p {
+    font-size: 2vw;
+    position: absolute;
+    left: 28%;
+    top: 48%;
+}
+
+.center-button {
+    text-decoration: none;
+    position: absolute;
+    /* 绝对定位 */
+    bottom: 12%;
+    /* 距离底部10%的位置 */
+    left: 50%;
+    /* 距离左侧50%的位置 */
+    transform: translateX(-50%);
+    /* 水平方向向左移动自身宽度的50%，以实现水平居中 */
+    padding: 10px 20px;
+    /* 按钮内边距 */
+    border: 1px solid #bd7713;
+    /* 边框 */
+    background-color: #f0c885;
+    /* 按钮背景颜色 */
+    color: white;
+    /* 按钮文字颜色 */
+    cursor: pointer;
+    /* 鼠标悬停时显示指针 */
+    border-radius: 20px;
+    /* 按钮圆角 */
+    transition:box-shadow 0.1s ease;
+    /* 平滑过渡效果 */
+}
+
+.center-button:hover {
+    /* 鼠标悬停时的样式 */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    /* 阴影变小，模拟浮起效果 */
+}
+
+.ren {
+    position: absolute;
+    right: 28%;
+    height: 60%;
+    width: auto;
+    bottom: -5%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.zhu1 {
+    position: absolute;
+    max-width: 50%;
+    transform-origin: bottom center;
+    z-index: 1;
+    right: 4%;
+    /* height: 90vh; */
+    height: 90vh;
+    width: 35vw;
+    bottom: -7%;
+    transform: rotate(-30deg);
+    transition: transform 2s ease;
+}
+
+.zhu2 {
+    position: absolute;
+    max-width: 50%;
+    transform-origin: bottom center;
+    z-index: 1;
+    right: -1%;
+    height: 900px;
+    width: 35vw;
+    animation: shakezhu2 3s ease-in-out infinite;
+}
+
+@keyframes shakeWei {
+    0% {
+        transform: translateX(-4px);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    100% {
+        transform: translateX(-4px);
+    }
+}
+
+@keyframes shakezhu2 {
+    0% {
+        transform: translateX(-2px);
+    }
+
+    50% {
+        transform: translateX(2px);
+    }
+
+    100% {
+        transform: translateX(-2px);
+    }
+}
+
+@keyframes shakeHua {
+    0% {
+        transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+.wei {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+    max-width: 100%;
+    height: 55%;
+    width: 32vw;
+    animation: shakeWei 3s ease-in-out infinite;
+}
+
+.hua {
+    position: absolute;
+    left: -5px;
+    top: -10%;
+    max-width: 100%;
+    /* height: 210px; */
+    height: 32%;
+    animation: shakeHua 3s ease-in-out infinite;
+}
+
+.shangxi {
+    height: 750px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to bottom right, #fdf1e2, #f0ca87);
+}
